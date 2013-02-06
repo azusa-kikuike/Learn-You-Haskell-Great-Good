@@ -96,8 +96,9 @@ cylinder r h =
     in sideArea + 2 * topArea
 
 describeList :: [a] -> String
-describeList ls = "The list is "
-    ++ case ls of [] -> "empty."
-                  [x] -> "a singleton list."
-                  xs -> "a longer list."
+describeList ls = "The list is " ++ what ls
+    where what [] = "empty."
+          what [x] = "a singleton list."
+          what xs = "a longer list."
+
 
