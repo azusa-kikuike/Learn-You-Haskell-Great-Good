@@ -18,5 +18,7 @@ reverse' :: [a] -> [a]
 reverse' [] = []
 reverse' (x:xs) = reverse' xs ++ [x]
 
+repeat' :: a -> [a]
+repeat' x = x : repeat' x
 
 
